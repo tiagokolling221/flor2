@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 Mensagem Especial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Capa Inicial -->
+        <div id="cover" class="screen active">
+            <div class="cover-content">
+                <div class="cover-hearts">
+                    <div class="heart heart-1">💖</div>
+                    <div class="heart heart-2">💕</div>
+                    <div class="heart heart-3">💗</div>
+                    <div class="heart heart-4">💝</div>
+                    <div class="heart heart-5">💘</div>
+                </div>
+                <div class="cover-card">
+                    <div class="cover-title">
+                        <span class="from">De</span>
+                        <span class="sender-name">Lucas Borges</span>
+                    </div>
+                    <div class="cover-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-heart">💌</div>
+                        <div class="divider-line"></div>
+                    </div>
+                    <div class="cover-subtitle">
+                        <span class="for">Para</span>
+                        <span class="recipient-name">Lavinia</span>
+                    </div>
+                    <button class="btn btn-cover" onclick="goToScreen(1)">
+                        ✨ Abrir Mensagem ✨
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Primeira Tela -->
+        <div id="screen1" class="screen">
+            <div class="card">
+                <div class="emoji">📩</div>
+                <p class="message">
+                    "Se você recebeu esta mensagem... Parabens! você desbloqueou meu coraçao."
+                </p>
+                <button class="btn btn-primary" onclick="goToScreen(2)">
+                    👉 Próximo
+                </button>
+            </div>
+        </div>
+
+        <!-- Segunda Tela -->
+        <div id="screen2" class="screen">
+            <div class="card">
+                <div class="emoji">💭</div>
+                <p class="message">
+                    "Você me daria uma pequena chance de demonstrar meu pacote completo? carinho, afeto... e umas piadas ruins de brinde?"
+                </p>
+                <div class="buttons-container">
+                    <button class="btn btn-yes" onclick="goToScreen(3)">
+                        Sim 💖
+                    </button>
+                    <button id="noButton" class="btn btn-no" onclick="moveNoButton()" onmouseover="moveNoButton()">
+                        Não ❌
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terceira Tela -->
+        <div id="screen3" class="screen">
+            <div class="card">
+                <div class="emoji">🌹</div>
+                <h2 class="success-title">BOA ESCOLHA! 🎉</h2>
+                <p class="message">
+                    Você ganhou um Vale-Flor (edição limitada, só você tem).
+                </p>
+                <div class="contact-box">
+                    <p class="contact-message">
+                        💌 Por favor, entre em contato com o remetente para resgatar seu prêmio e aproveite que ele também vem no combo.
+                    </p>
+                </div>
+                <button class="btn btn-restart" onclick="goToScreen(0)">
+                    ↻ Voltar ao Início
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partículas de fundo -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
